@@ -6,122 +6,225 @@
         <link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css" />
         <script src="js/jquery.min.js"></script>
         <script src="js/jquery.mobile-1.3.1.min.js"></script>
+        <style>
+			.result{
+				padding-right:10px;
+			}
+		</style>
     </head>
     <body>
         <div data-role="page">
             <div data-role="panel" id="panel" data-position="right" data-theme="a" data-display="push">
                 <fieldset class="ui-grid-a">
-                    <div class="ui-block-b"><button data-icon="flat-cmd" data-theme="d">Mercury</button></div>
-                    <div class="ui-block-a"><button data-icon="flat-cmd" data-theme="e">Venus</button></div>
-                    <div class="ui-block-b"><button data-icon="flat-cmd" data-theme="f">Earth</button></div>
-                    <div class="ui-block-a"><button data-icon="flat-cmd" data-theme="g">Mars</button></div>
-                    <div class="ui-block-b"><button data-icon="flat-cmd" data-theme="d">Jupiter</button></div>
-                    <div class="ui-block-a"><button data-icon="flat-cmd" data-theme="e">Saturn</button></div>
-                    <div class="ui-block-b"><button data-icon="flat-cmd" data-theme="f">Uranus</button></div>
-                    <div class="ui-block-a"><button data-icon="flat-cmd" data-theme="g">Neptune</button></div>
-                    <div class="ui-block-a"><button data-icon="flat-cmd" data-theme="c">Pluto</button></div>
+                    <div class="ui-block-b"><button id="mercuryPage" data-icon="flat-cmd" data-theme="d">Mercury</button id="mercuryPage"></div>
+                    <div class="ui-block-a"><button id="venusPage" data-icon="flat-cmd" data-theme="e">Venus</button></div>
+                    <div class="ui-block-b"><button id="earthPage" data-icon="flat-cmd" data-theme="f">Earth</button></div>
+                    <div class="ui-block-a"><button id="venusPage" data-icon="flat-cmd" data-theme="g">Mars</button></div>
+                    <div class="ui-block-b"><button id="jupiterPage" data-icon="flat-cmd" data-theme="d">Jupiter</button></div>
+                    <div class="ui-block-a"><button id="saturnPage" data-icon="flat-cmd" data-theme="e">Saturn</button></div>
+                    <div class="ui-block-b"><button id="uranusPage" data-icon="flat-cmd" data-theme="f">Uranus</button></div>
+                    <div class="ui-block-a"><button id="neptunePage" data-icon="flat-cmd" data-theme="g">Neptune</button></div>
+                    <div class="ui-block-a"><button id="plutoPage" data-icon="flat-cmd" data-theme="c">Pluto</button></div>
                 </fieldset>            
             </div>
             <div data-role="header">
-                <a data-iconpos="notext" data-role="button" data-icon="home" title="Home">Home</a>
+                <a data-iconpos="notext" data-role="button" data-icon="home" title="Home" id="home">Home</a>
                 <h1>Planetary Weight</h1>
                 <a data-iconpos="notext" href="#panel" data-role="button" data-icon="flat-menu"></a>
             </div>
         
-            <div data-role="content" role="main">
+            <div data-role="content" role="main" id="main" style="margin:auto">
                 <input id="weight" type="number" placeholder="Enter your Earth weight (KG) :" />
+                <input id="age" type="number" placeholder="Enter your age :" />
                 <fieldset class="ui-grid-a">
                     <div class="ui-block-a"><button id="submit" data-icon="flat-heart" data-theme="g">Submit</button></div>
                 </fieldset>
+				<div class="ui-grid-c">
+                    <ul class="result" data-role="listview" data-inset="true" style="float:left">
+                        <li data-role="list-divider" data-theme="a">Mercury</li>
+                        <li id="mercuryWeight"></li>
+                        <li id="mercuryAge"></li>
+                    </ul>
 
-                <ul class="result" data-role="listview" data-inset="true">
-                    <li data-role="list-divider" data-theme="a">Mercury</li>
-                    <li id="mercuryWeight"></li>
-                </ul>
-                                
-                <ul class="result" data-role="listview" data-inset="true">
-                    <li data-role="list-divider" data-theme="a">Venus</li>
-                    <li id="venusWeight"></li>
-                </ul>
-            
-                <ul class="result" data-role="listview" data-inset="true">
-                    <li data-role="list-divider" data-theme="a">Earth</li>
-                    <li id="earthWeight"></li>
-                </ul>
-            
-                <ul class="result" data-role="listview" data-inset="true">
-                    <li data-role="list-divider" data-theme="a">Mars</li>
-                    <li id="marsWeight"></li>
-                </ul>
-            
-                <ul class="result" data-role="listview" data-inset="true">
-                    <li data-role="list-divider" data-theme="a">Jupiter</li>
-                    <li id="jupiterWeight"></li>
-                </ul>
-            
-                <ul class="result" data-role="listview" data-inset="true">
-                    <li data-role="list-divider" data-theme="a">Saturn</li>
-                    <li id="saturnWeight"></li>
-                </ul>
-            
-                <ul class="result" data-role="listview" data-inset="true">
-                    <li data-role="list-divider" data-theme="a">Uranus</li>
-                    <li id="uranusWeight"></li>
-                </ul>
-            
-                <ul class="result" data-role="listview" data-inset="true">
-                    <li data-role="list-divider" data-theme="a">Neptune</li>
-                    <li id="neptuneWeight"></li>
-                </ul>
-            
-                <ul class="result" data-role="listview" data-inset="true">
-                    <li data-role="list-divider" data-theme="a">Pluto</li>
-                    <li id="plutoWeight"></li>
-                </ul>
-            
+                    <ul class="result" data-role="listview" data-inset="true" style="float:left">
+                        <li data-role="list-divider" data-theme="a">Venus</li>
+                        <li id="venusWeight"></li>
+                        <li id="venusAge"></li>
+                    </ul>
+
+                    <ul class="result" data-role="listview" data-inset="true" style="float:left">
+                        <li data-role="list-divider" data-theme="a">Earth</li>
+                        <li id="earthWeight"></li>
+                        <li id="earthAge"></li>
+                    </ul>
+                </div>
+                
+				<div class="ui-grid-c">
+                    <ul class="result" data-role="listview" data-inset="true" style="float:left">
+                        <li data-role="list-divider" data-theme="a">Mars</li>
+                        <li id="marsWeight"></li>
+                        <li id="marsAge"></li>
+                    </ul>
+                
+                    <ul class="result" data-role="listview" data-inset="true" style="float:left">
+                        <li data-role="list-divider" data-theme="a">Jupiter</li>
+                        <li id="jupiterWeight"></li>
+                        <li id="jupiterAge"></li>
+                    </ul>
+                
+                    <ul class="result" data-role="listview" data-inset="true" style="float:left">
+                        <li data-role="list-divider" data-theme="a">Saturn</li>
+                        <li id="saturnWeight"></li>
+                        <li id="saturnAge"></li>
+                    </ul>
+                </div>
+
+				<div class="ui-grid-c">
+                    <ul class="result" data-role="listview" data-inset="true" style="float:left">
+                        <li data-role="list-divider" data-theme="a">Uranus</li>
+                        <li id="uranusWeight"></li>
+                        <li id="uranusAge"></li>
+                    </ul>
+                
+                    <ul class="result" data-role="listview" data-inset="true" style="float:left">
+                        <li data-role="list-divider" data-theme="a">Neptune</li>
+                        <li id="neptuneWeight"></li>
+                        <li id="neptuneAge"></li>
+                    </ul>
+                
+                    <ul class="result" data-role="listview" data-inset="true" style="float:left">
+                        <li data-role="list-divider" data-theme="a">Pluto</li>
+                        <li id="plutoWeight"></li>
+                        <li id="plutoAge"></li>
+                    </ul>
+                </div>
             </div>
 
+			<section id="mercuryPageDetails" data-role="content">
+				<ul data-role="listview" data-inset="true">
+                    <li data-role="list-divider" data-theme="a" class="center">Mercury</li>
+					<center><img src="icon.png"></center>
+                </ul>
+
+                <div data-role="collapsible-set" data-theme="b" data-content-theme="b">
+                    <div data-role="collapsible" data-collapsed-icon="flat-time" data-expanded-icon="flat-cross" data-collapsed="false">
+	                    <h3>Section 1</h3>
+    	                <p>I'm the collapsible content for section 1</p>
+                    </div>
+                    <div data-role="collapsible" data-collapsed-icon="flat-calendar" data-expanded-icon="flat-cross">
+        	            <h3>Section 2</h3>
+            	        <p>I'm the collapsible content for section 2</p>
+                    </div>
+                    <div data-role="collapsible" data-collapsed-icon="flat-settings" data-expanded-icon="flat-cross">
+                	    <h3>Section 3</h3>
+                    	<p>I'm the collapsible content for section 3</p>
+                    </div>
+                </div>
+            </section>
+
       </div>
-      <div id="highlight"></div>
     </body>
     <script>
 		$(document).ready(function(e) {
 			
-			$('.result').hide();
+			$('#home').click(function(){
+				location.reload();
+			});
+			
+			$('.result, #mercuryPageDetails').hide();
 			
 			$('#weight').focus();
 			
             $('#submit').click(function(){
 		
 				$('.result').show();
-	
-				var mercury = parseFloat($('#weight').val()) * 0.38;
-				$('#mercuryWeight').text(mercury.toFixed(2)).append(' kg');
+				<!-- Mercury starts -->
 
-				var venus = parseFloat($('#weight').val()) * 0.91;
-				$('#venusWeight').text(venus.toFixed(2)).append(' kg');
+					var mercury = parseFloat($('#weight').val()) * 0.38;
+					$('#mercuryWeight').text(mercury.toFixed(2)).append(' kg');
+					
+					var mercuryAge = parseInt($('#age').val()) / 0.241;
+					$('#mercuryAge').text(mercuryAge.toFixed(2)).append(' Years');
 
-				var earth = parseFloat($('#weight').val()) * 1.0;
-				$('#earthWeight').text(earth.toFixed(2)).append(' kg');
+				<!-- Mercury ends -->
+				<!-- Venus starts -->
 
-				var mars = parseFloat($('#weight').val()) * 0.38;
-				$('#marsWeight').text(mars.toFixed(2)).append(' kg');
+					var venus = parseFloat($('#weight').val()) * 0.91;
+					$('#venusWeight').text(venus.toFixed(2)).append(' kg');
+					
+					var venusAge = parseInt($('#age').val()) / 0.615;
+					$('#venusAge').text(venusAge.toFixed(2)).append(' Years');
 
-				var jupiter = parseFloat($('#weight').val()) * 2.36;
-				$('#jupiterWeight').text(jupiter.toFixed(2)).append(' kg');
+				<!-- Venus ends -->
+				<!-- Earth starts -->
 
-				var saturn = parseFloat($('#weight').val()) * 0.91;
-				$('#saturnWeight').text(saturn.toFixed(2)).append(' kg');
+					var earth = parseFloat($('#weight').val()) * 1.0;
+					$('#earthWeight').text(earth.toFixed(2)).append(' kg');
+					
+					var earthAge = parseInt($('#age').val()) / 1.0;
+					$('#earthAge').text(earthAge.toFixed(2)).append(' Years');
 
-				var uranus = parseFloat($('#weight').val()) * 0.89;
-				$('#uranusWeight').text(uranus.toFixed(2)).append(' kg');
+				<!-- Earth ends -->
+				<!-- Mars starts -->
 
-				var neptune = parseFloat($('#weight').val()) * 1.12;
-				$('#neptuneWeight').text(neptune.toFixed(2)).append(' kg');
+					var mars = parseFloat($('#weight').val()) * 0.38;
+					$('#marsWeight').text(mars.toFixed(2)).append(' kg');
+					
+					var marsAge = parseInt($('#age').val()) / 1.88;
+					$('#marsAge').text(marsAge.toFixed(2)).append(' Years');
 
-				var pluto = parseFloat($('#weight').val()) * 0.06;
-				$('#plutoWeight').text(pluto.toFixed(2)).append(' kg');
+				<!-- Mars ends -->
+				<!-- Jupiter starts -->
 
+					var jupiter = parseFloat($('#weight').val()) * 2.36;
+					$('#jupiterWeight').text(jupiter.toFixed(2)).append(' kg');
+					
+					var jupiterAge = parseInt($('#age').val()) / 11.9;
+					$('#jupiterAge').text(jupiterAge.toFixed(2)).append(' Years');
+
+				<!-- Jupiter ends -->
+				<!-- Saturn starts -->
+
+					var saturn = parseFloat($('#weight').val()) * 0.91;
+					$('#saturnWeight').text(saturn.toFixed(2)).append(' kg');
+					
+					var saturnAge = parseInt($('#age').val()) / 29.5;
+					$('#saturnAge').text(saturnAge.toFixed(2)).append(' Years');
+
+				<!-- Saturn ends -->
+				<!-- Uranus ends -->
+
+					var uranus = parseFloat($('#weight').val()) * 0.89;
+					$('#uranusWeight').text(uranus.toFixed(2)).append(' kg');
+					
+					var uranusAge = parseInt($('#age').val()) / 84.0;
+					$('#uranusAge').text(uranusAge.toFixed(2)).append(' Years');
+
+				<!-- Uranus ends -->
+				<!-- Neptune starts -->
+
+					var neptune = parseFloat($('#weight').val()) * 1.12;
+					$('#neptuneWeight').text(neptune.toFixed(2)).append(' kg');
+					
+					var neptuneAge = parseInt($('#age').val()) / 164.8;
+					$('#neptuneAge').text(neptuneAge.toFixed(2)).append(' Years');
+
+				<!-- Neptune ends -->
+				<!-- Pluto starts -->
+
+					var pluto = parseFloat($('#weight').val()) * 0.06;
+					$('#plutoWeight').text(pluto.toFixed(2)).append(' kg');
+					
+					var plutoAge = parseInt($('#age').val()) / 248.5;
+					$('#plutoAge').text(plutoAge.toFixed(2)).append(' Years');
+
+				<!-- Neptune ends -->
+
+			});
+			
+			$('#mercuryPage').click(function(){
+				$('#main').hide();
+				$('#mercuryPageDetails').show();
 			});
         });
 	</script>
