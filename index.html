@@ -9,68 +9,80 @@
     </head>
     <body>
         <div data-role="page">
-            <div data-role="panel" id="panel" data-position="right" data-theme="a" data-display="push"></div>
-                <div data-role="header">
-                    <a data-iconpos="notext" data-role="button" data-icon="home" title="Home">Home</a>
-                    <h1>Planetary Weight</h1>
-                    <!--a data-iconpos="notext" href="#panel" data-role="button" data-icon="flat-menu"></a-->
-                </div>
+            <div data-role="panel" id="panel" data-position="right" data-theme="a" data-display="push">
+                <fieldset class="ui-grid-a">
+                    <div class="ui-block-b"><button data-icon="flat-cmd" data-theme="d">Mercury</button></div>
+                    <div class="ui-block-a"><button data-icon="flat-cmd" data-theme="e">Venus</button></div>
+                    <div class="ui-block-b"><button data-icon="flat-cmd" data-theme="f">Earth</button></div>
+                    <div class="ui-block-a"><button data-icon="flat-cmd" data-theme="g">Mars</button></div>
+                    <div class="ui-block-b"><button data-icon="flat-cmd" data-theme="d">Jupiter</button></div>
+                    <div class="ui-block-a"><button data-icon="flat-cmd" data-theme="e">Saturn</button></div>
+                    <div class="ui-block-b"><button data-icon="flat-cmd" data-theme="f">Uranus</button></div>
+                    <div class="ui-block-a"><button data-icon="flat-cmd" data-theme="g">Neptune</button></div>
+                    <div class="ui-block-a"><button data-icon="flat-cmd" data-theme="c">Pluto</button></div>
+                </fieldset>            
+            </div>
+            <div data-role="header">
+                <a data-iconpos="notext" data-role="button" data-icon="home" title="Home">Home</a>
+                <h1>Planetary Weight</h1>
+                <a data-iconpos="notext" href="#panel" data-role="button" data-icon="flat-menu"></a>
+            </div>
+        
+            <div data-role="content" role="main">
+                <input id="weight" type="number" placeholder="Enter your Earth weight (KG) :" />
+                <fieldset class="ui-grid-a">
+                    <div class="ui-block-a"><button id="submit" data-icon="flat-heart" data-theme="g">Submit</button></div>
+                </fieldset>
+
+                <ul class="result" data-role="listview" data-inset="true">
+                    <li data-role="list-divider" data-theme="a">Mercury</li>
+                    <li id="mercuryWeight"></li>
+                </ul>
+                                
+                <ul class="result" data-role="listview" data-inset="true">
+                    <li data-role="list-divider" data-theme="a">Venus</li>
+                    <li id="venusWeight"></li>
+                </ul>
             
-                <div data-role="content" role="main">
-                    <input id="weight" type="number" placeholder="Enter your Earth weight (KG) :" />
-                    <fieldset class="ui-grid-a">
-                        <div class="ui-block-a"><button id="submit" data-icon="flat-heart" data-theme="g">Submit</button></div>
-                    </fieldset>
+                <ul class="result" data-role="listview" data-inset="true">
+                    <li data-role="list-divider" data-theme="a">Earth</li>
+                    <li id="earthWeight"></li>
+                </ul>
+            
+                <ul class="result" data-role="listview" data-inset="true">
+                    <li data-role="list-divider" data-theme="a">Mars</li>
+                    <li id="marsWeight"></li>
+                </ul>
+            
+                <ul class="result" data-role="listview" data-inset="true">
+                    <li data-role="list-divider" data-theme="a">Jupiter</li>
+                    <li id="jupiterWeight"></li>
+                </ul>
+            
+                <ul class="result" data-role="listview" data-inset="true">
+                    <li data-role="list-divider" data-theme="a">Saturn</li>
+                    <li id="saturnWeight"></li>
+                </ul>
+            
+                <ul class="result" data-role="listview" data-inset="true">
+                    <li data-role="list-divider" data-theme="a">Uranus</li>
+                    <li id="uranusWeight"></li>
+                </ul>
+            
+                <ul class="result" data-role="listview" data-inset="true">
+                    <li data-role="list-divider" data-theme="a">Neptune</li>
+                    <li id="neptuneWeight"></li>
+                </ul>
+            
+                <ul class="result" data-role="listview" data-inset="true">
+                    <li data-role="list-divider" data-theme="a">Pluto</li>
+                    <li id="plutoWeight"></li>
+                </ul>
+            
+            </div>
 
-                    <ul class="result" data-role="listview" data-inset="true">
-                        <li data-role="list-divider" data-theme="a">Mercury</li>
-                        <li id="mercuryWeight"></li>
-                    </ul>
-                                    
-                    <ul class="result" data-role="listview" data-inset="true">
-                        <li data-role="list-divider" data-theme="a">Venus</li>
-                        <li id="venusWeight"></li>
-                    </ul>
-                
-                    <ul class="result" data-role="listview" data-inset="true">
-                        <li data-role="list-divider" data-theme="a">Earth</li>
-                        <li id="earthWeight"></li>
-                    </ul>
-                
-                    <ul class="result" data-role="listview" data-inset="true">
-                        <li data-role="list-divider" data-theme="a">Mars</li>
-                        <li id="marsWeight"></li>
-                    </ul>
-                
-                    <ul class="result" data-role="listview" data-inset="true">
-                        <li data-role="list-divider" data-theme="a">Jupiter</li>
-                        <li id="jupiterWeight"></li>
-                    </ul>
-                
-                    <ul class="result" data-role="listview" data-inset="true">
-                        <li data-role="list-divider" data-theme="a">Saturn</li>
-                        <li id="saturnWeight"></li>
-                    </ul>
-                
-                    <ul class="result" data-role="listview" data-inset="true">
-                        <li data-role="list-divider" data-theme="a">Uranus</li>
-                        <li id="uranusWeight"></li>
-                    </ul>
-                
-                    <ul class="result" data-role="listview" data-inset="true">
-                        <li data-role="list-divider" data-theme="a">Neptune</li>
-                        <li id="neptuneWeight"></li>
-                    </ul>
-                
-                    <ul class="result" data-role="listview" data-inset="true">
-                        <li data-role="list-divider" data-theme="a">Pluto</li>
-                        <li id="plutoWeight"></li>
-                    </ul>
-                
-                </div>
-
-          </div>
-          <div id="highlight"></div>
+      </div>
+      <div id="highlight"></div>
     </body>
     <script>
 		$(document).ready(function(e) {

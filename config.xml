@@ -3,7 +3,7 @@
 	xmlns:gap = "http://phonegap.com/ns/1.0"
 	id        = "in.kitnahua.planetary_weight"
 	version   = "2.7.0">
-	<name>Planetary Weight</name>
+	<name>Weight</name>
 	<description>
 		Planetary Weight - Check your weight on all planets
 	</description>
