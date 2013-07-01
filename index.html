@@ -16,16 +16,16 @@
         <div data-role="page">
             <div data-role="panel" id="panel" data-position="right" data-theme="a" data-display="push">
                 <fieldset class="ui-grid-a">
-                    <div class="ui-block-b"><button id="mercuryPage" data-icon="flat-cmd" data-theme="d">Mercury</button id="mercuryPage"></div>
-                    <div class="ui-block-a"><button id="venusPage" data-icon="flat-cmd" data-theme="e">Venus</button></div>
-                    <div class="ui-block-b"><button id="earthPage" data-icon="flat-cmd" data-theme="f">Earth</button></div>
-                    <div class="ui-block-a"><button id="venusPage" data-icon="flat-cmd" data-theme="g">Mars</button></div>
-                    <div class="ui-block-b"><button id="jupiterPage" data-icon="flat-cmd" data-theme="d">Jupiter</button></div>
-                    <div class="ui-block-a"><button id="saturnPage" data-icon="flat-cmd" data-theme="e">Saturn</button></div>
-                    <div class="ui-block-b"><button id="uranusPage" data-icon="flat-cmd" data-theme="f">Uranus</button></div>
-                    <div class="ui-block-a"><button id="neptunePage" data-icon="flat-cmd" data-theme="g">Neptune</button></div>
-                    <div class="ui-block-a"><button id="plutoPage" data-icon="flat-cmd" data-theme="c">Pluto</button></div>
-                </fieldset>            
+                    <div class="ui-block-b"><button id="mercuryPage" data-theme="d">Mercury</button id="mercuryPage"></div>
+                    <div class="ui-block-a"><button id="venusPage" data-theme="e">Venus</button></div>
+                    <div class="ui-block-b"><button id="earthPage" data-theme="f">Earth</button></div>
+                    <div class="ui-block-a"><button id="venusPage" data-theme="g">Mars</button></div>
+                    <div class="ui-block-b"><button id="jupiterPage" data-theme="d">Jupiter</button></div>
+                    <div class="ui-block-a"><button id="saturnPage" data-theme="e">Saturn</button></div>
+                    <div class="ui-block-b"><button id="uranusPage" data-theme="f">Uranus</button></div>
+                    <div class="ui-block-a"><button id="neptunePage" data-theme="g">Neptune</button></div>
+                    <div class="ui-block-a"><button id="plutoPage" data-theme="c">Pluto</button></div>
+                </fieldset> <!--  data-icon="flat-cmd" -->
             </div>
             <div data-role="header">
                 <a data-iconpos="notext" data-role="button" data-icon="home" title="Home" id="home">Home</a>
@@ -103,21 +103,37 @@
 			<section id="mercuryPageDetails" data-role="content">
 				<ul data-role="listview" data-inset="true">
                     <li data-role="list-divider" data-theme="a" class="center">Mercury</li>
-					<center><img src="icon.png"></center>
+					<center><img src="images/mercury.png"></center>
                 </ul>
 
                 <div data-role="collapsible-set" data-theme="b" data-content-theme="b">
                     <div data-role="collapsible" data-collapsed-icon="flat-time" data-expanded-icon="flat-cross" data-collapsed="false">
-	                    <h3>Section 1</h3>
-    	                <p>I'm the collapsible content for section 1</p>
+	                    <h3>Basic</h3>
+    	                <p><strong>Mercury</strong> is the smallest and closest to the <strong>Sun</strong> of the eight planets in the Solar System, with an orbital period of about 88 Earth days. Seen from the <strong>Earth</strong>, it appears to move around its orbit in about 116 days, which is much faster than any other planet.</p>
                     </div>
                     <div data-role="collapsible" data-collapsed-icon="flat-calendar" data-expanded-icon="flat-cross">
-        	            <h3>Section 2</h3>
-            	        <p>I'm the collapsible content for section 2</p>
+        	            <h3>Fab Facts</h3>
+						<ul>
+                        	<li><strong>Mercury</strong> makes three rotations about its axis for every two revolutions around its orbit, as seen relative to the fixed stars.</li>
+                            <li><strong>Mercury</strong> is one of four terrestrial planets in the Solar System, and is a rocky body like the Earth. It is the smallest planet in the Solar System, with an equatorial radius of 2,439.7 km.</li>
+                            <li>Half of <strong>Mercury</strong> had never been seen.</li>
+                            <li>You can see <strong>Mercury</strong> with your own eyes</li>
+                            <li>Hubble can’t look at <strong>Mercury</strong> at all - The planet is so close to the Sun that the light from the Sun would overwhelm Hubble, and could permanently damage its optics and electronics.</li>
+                        </ul>
                     </div>
                     <div data-role="collapsible" data-collapsed-icon="flat-settings" data-expanded-icon="flat-cross">
-                	    <h3>Section 3</h3>
-                    	<p>I'm the collapsible content for section 3</p>
+                	    <h3>Statistics</h3>
+						<ul>
+                            <li>42% Molecular oxygen, </li>
+                            <li>29.0% sodium, </li>
+                            <li>22.0% hydrogen, </li>
+                            <li>6.0% helium, </li>
+                            <li>0.5% potassium, </li>
+                            <li>Trace amounts of <strong>argon</strong>, <strong>nitrogen</strong>, <strong>carbon dioxide</strong>, <strong>water vapor</strong>, <strong>xenon</strong>, <strong>krypton</strong>, and <strong>neon</strong>. </li>
+							<li><strong>Mass</strong> : 3.3022×1023 kg or 0.055 <strong>Earths</strong>. </li>
+                            <li><strong>Orbital Period (Sun)</strong> : 88 Earth Days. </li>
+                            <li><strong>Spin on Axis</strong> : 58 days, 15 hours and 30 minutes. </li>
+						</ul>
                     </div>
                 </div>
             </section>
